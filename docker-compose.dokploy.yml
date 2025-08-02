@@ -4,7 +4,7 @@ services:
   dashboard:
     image: ghcr.io/aaacoder-ds/services-dashboard:main
     ports:
-      - "80:80"
+      - "8080:80"
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://localhost/health || exit 1"]
