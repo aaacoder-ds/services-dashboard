@@ -7,7 +7,8 @@ services:
       - "8080:80"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      # Use a shell form so we can fall back to curl if present
+      test: ["CMD-SHELL", "command -v curl >/dev/null 2>&1 && curl -fs http://localhost/health || (command -v wget >/dev/null 2>&1 && wget -qO- http://localhost/health)"]
       interval: 30s
       timeout: 10s
       retries: 3
