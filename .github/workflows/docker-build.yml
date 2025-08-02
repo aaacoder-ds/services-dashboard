@@ -10,6 +10,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository | toLower }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -45,7 +46,7 @@ jobs:
           type=sha,prefix={{branch}}-
 
     - name: Build and push Docker image
-      id: build            # ← ensures `steps.build.outputs.*` is available
+      id: build
       uses: docker/build-push-action@v5
       with:
         context: .
