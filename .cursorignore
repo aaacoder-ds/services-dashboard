@@ -66,6 +66,3 @@ temp/
 
 # Docker
 .dockerignore
-
-# GitHub Actions
-.github/workflows/ 

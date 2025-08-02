@@ -45,7 +45,6 @@ jobs:
           type=sha,prefix={{branch}}-
 
     - name: Build and push Docker image
-    - name: Build and push Docker image
       id: build            # ← ensures `steps.build.outputs.*` is available
       uses: docker/build-push-action@v5
       with:
