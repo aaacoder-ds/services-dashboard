@@ -5,6 +5,10 @@ FROM nginx:alpine
 COPY *.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/styles.css
 
+# Copy SEO files (robots.txt and sitemap.xml)
+COPY robots.txt /usr/share/nginx/html/robots.txt
+COPY sitemap.xml /usr/share/nginx/html/sitemap.xml
+
 # Copy custom nginx configuration (optional, for better performance)
 COPY nginx.conf /etc/nginx/nginx.conf
 
