@@ -135,54 +135,7 @@ body {
     opacity: 0.8;
 }
 
-/* Contact Info */
-.contact-info {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 2rem;
-}
 
-.contact-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.contact-email {
-    display: inline-block;
-    color: #ffd700;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    background: rgba(255, 215, 0, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-}
-
-.contact-email:hover {
-    background: rgba(255, 215, 0, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.2);
-}
-
-.contact-email:focus {
-    outline: 2px solid #ffd700;
-    outline-offset: 2px;
-}
-
-.contact-email:focus:not(:focus-visible) {
-    outline: none;
-}
-
-.contact-email:focus-visible {
-    outline: 2px solid #ffd700;
-    outline-offset: 2px;
-}
 
 /* Floating Shapes */
 .floating-shapes {
