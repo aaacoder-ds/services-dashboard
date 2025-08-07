@@ -1,8 +1,8 @@
 # Use nginx alpine for a lightweight image
 FROM nginx:alpine
 
-# Copy the HTML and CSS files to nginx's default serving directory
-COPY index.html /usr/share/nginx/html/index.html
+# Copy all HTML files to nginx's default serving directory
+COPY *.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/styles.css
 
 # Copy custom nginx configuration (optional, for better performance)
