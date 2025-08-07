@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -92,8 +94,40 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+    cursor: pointer;
+}
+
+/* Ensure all links within service cards are properly styled */
+.service-card,
+.service-card:link,
+.service-card:visited,
+.service-card:hover,
+.service-card:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* Additional fallback styles for links */
+a {
     text-decoration: none;
     color: inherit;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Specific override for service cards */
+.services-grid a {
+    text-decoration: none !important;
+    color: inherit !important;
     display: block;
 }
 
@@ -202,6 +236,27 @@ body {
     margin-bottom: 2rem;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+/* Ensure service pages have proper styling */
+.container {
+    text-align: center;
+    max-width: 1000px;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure proper text color on service pages */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow-x: hidden;
 }
 
 .breadcrumb a {
