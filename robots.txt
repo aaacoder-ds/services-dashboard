@@ -50,6 +50,7 @@ Allow: /pdf.html
 Allow: /pwgen.html
 Allow: /qr-code.html
 Allow: /units-converter.html
+Allow: /404.html
 Allow: /styles.css
 Allow: /sitemap.xml
 
