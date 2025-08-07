@@ -55,6 +55,16 @@ body {
     animation: pulse 2s infinite;
 }
 
+.main-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .description {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -82,6 +92,9 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .service-card::before {
@@ -113,16 +126,16 @@ body {
 .service-title {
     font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .service-description {
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 1rem;
     line-height: 1.5;
+    opacity: 0.8;
 }
 
-/* Contact Section */
+/* Contact Info */
 .contact-info {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -139,25 +152,27 @@ body {
 }
 
 .contact-email {
-    font-size: 1.1rem;
-    color: #e6b800;
+    display: inline-block;
+    color: #ffd700;
     text-decoration: none;
-    transition: color 0.3s ease, outline 0.2s ease;
-    border-radius: 4px;
-    padding: 2px 4px;
-    margin: -2px -4px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
 .contact-email:hover {
-    color: #cc9900;
-    text-decoration: underline;
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.2);
 }
 
 .contact-email:focus {
-    outline: 2px solid #cc9900;
+    outline: 2px solid #ffd700;
     outline-offset: 2px;
-    color: #cc9900;
-    text-decoration: underline;
 }
 
 .contact-email:focus:not(:focus-visible) {
@@ -165,13 +180,11 @@ body {
 }
 
 .contact-email:focus-visible {
-    outline: 2px solid #cc9900;
+    outline: 2px solid #ffd700;
     outline-offset: 2px;
-    color: #cc9900;
-    text-decoration: underline;
 }
 
-/* Floating Background Shapes */
+/* Floating Shapes */
 .floating-shapes {
     position: fixed;
     top: 0;
@@ -180,6 +193,7 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: 1;
+    pointer-events: none;
 }
 
 .shape {
@@ -187,7 +201,6 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
-    pointer-events: none;
 }
 
 .shape:nth-child(1) {
@@ -199,27 +212,27 @@ body {
 }
 
 .shape:nth-child(2) {
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     top: 60%;
-    right: 10%;
-    animation-delay: 2s;
+    left: 80%;
+    animation-delay: 1s;
 }
 
 .shape:nth-child(3) {
-    width: 60px;
-    height: 60px;
-    top: 80%;
-    left: 20%;
-    animation-delay: 4s;
-}
-
-.shape:nth-child(4) {
     width: 100px;
     height: 100px;
     top: 40%;
-    right: 20%;
-    animation-delay: 1s;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.shape:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 1.5s;
 }
 
 .shape:nth-child(5) {
@@ -228,6 +241,378 @@ body {
     top: 70%;
     left: 60%;
     animation-delay: 3s;
+}
+
+/* Service Page Specific Styles */
+.breadcrumb {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.breadcrumb a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.service-hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-icon-large {
+    font-size: 5rem;
+    flex-shrink: 0;
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-primary {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #333;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+    margin-bottom: 4rem;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.format-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.format-category {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.format-category:hover {
+    transform: translateY(-5px);
+}
+
+.format-category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.format-category p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Benefits Section */
+.benefits-section {
+    margin-bottom: 4rem;
+}
+
+.benefits-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* How-to Section */
+.how-to-section {
+    margin-bottom: 4rem;
+}
+
+.how-to-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.step p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 4rem;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Service Footer */
+.service-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-footer p {
+    margin-top: 1rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Additional Sections */
+.tools-grid, .customization-section, .security-section, .api-section, .use-cases-section, .additional-units {
+    margin-bottom: 4rem;
+}
+
+.tools-grid h2, .customization-section h2, .security-section h2, .api-section h2, .use-cases-section h2, .additional-units h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.tools-list, .customization-grid, .security-features, .use-cases-grid, .units-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tool-item, .customization-item, .security-item, .use-case-item, .unit-category {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover, .customization-item:hover, .security-item:hover, .use-case-item:hover, .unit-category:hover {
+    transform: translateY(-5px);
+}
+
+.tool-item h3, .customization-item h3, .security-item h3, .use-case-item h3, .unit-category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tool-item p, .customization-item p, .security-item p, .use-case-item p, .unit-category p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.api-example {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.api-example h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.api-example code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    display: block;
+    font-family: 'Courier New', monospace;
+    margin: 1rem 0;
+    word-break: break-all;
+}
+
+.api-example p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
 }
 
 /* Animations */
@@ -266,6 +651,22 @@ body {
     .service-card:hover {
         transform: none;
     }
+    
+    .format-category:hover,
+    .benefit-item:hover,
+    .step:hover,
+    .tool-item:hover,
+    .customization-item:hover,
+    .security-item:hover,
+    .use-case-item:hover,
+    .unit-category:hover {
+        transform: none;
+    }
+    
+    .cta-primary:hover,
+    .cta-secondary:hover {
+        transform: none;
+    }
 }
 
 /* Responsive Design */
@@ -275,6 +676,10 @@ body {
     }
     
     .coming-soon {
+        font-size: 2.5rem;
+    }
+    
+    .main-title {
         font-size: 2.5rem;
     }
     
@@ -294,6 +699,59 @@ body {
     .service-card {
         padding: 1.5rem;
     }
+    
+    /* Service page responsive */
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .service-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .service-icon-large {
+        font-size: 4rem;
+    }
+    
+    .service-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .features-section h2,
+    .benefits-section h2,
+    .how-to-section h2,
+    .faq-section h2,
+    .tools-grid h2,
+    .customization-section h2,
+    .security-section h2,
+    .api-section h2,
+    .use-cases-section h2,
+    .additional-units h2 {
+        font-size: 2rem;
+    }
+    
+    .format-categories,
+    .benefits-grid,
+    .steps,
+    .tools-list,
+    .customization-grid,
+    .security-features,
+    .use-cases-grid,
+    .units-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -302,6 +760,10 @@ body {
     }
     
     .coming-soon {
+        font-size: 2rem;
+    }
+    
+    .main-title {
         font-size: 2rem;
     }
     
@@ -319,5 +781,64 @@ body {
     
     .service-title {
         font-size: 1.1rem;
+    }
+    
+    /* Service page responsive */
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .service-hero {
+        padding: 1.5rem;
+    }
+    
+    .service-icon-large {
+        font-size: 3rem;
+    }
+    
+    .service-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .service-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .features-section h2,
+    .benefits-section h2,
+    .how-to-section h2,
+    .faq-section h2,
+    .tools-grid h2,
+    .customization-section h2,
+    .security-section h2,
+    .api-section h2,
+    .use-cases-section h2,
+    .additional-units h2 {
+        font-size: 1.8rem;
+    }
+    
+    .format-category,
+    .benefit-item,
+    .step,
+    .tool-item,
+    .customization-item,
+    .security-item,
+    .use-case-item,
+    .unit-category {
+        padding: 1.5rem;
+    }
+    
+    .faq-item {
+        padding: 1.5rem;
     }
 } 

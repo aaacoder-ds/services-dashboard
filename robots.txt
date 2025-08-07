@@ -1,0 +1,57 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aaacoder.xyz/sitemap.xml
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block common bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Allow access to all pages and resources
+Allow: /index.html
+Allow: /convert.html
+Allow: /img.html
+Allow: /pdf.html
+Allow: /pwgen.html
+Allow: /qr-code.html
+Allow: /units-converter.html
+Allow: /styles.css
+Allow: /sitemap.xml
+
+# Allow access to images (when they exist)
+Allow: /images/
